@@ -3,7 +3,7 @@ Set-ExecutionPolicy Bypass -Force
 iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # Install all apps
-cinst Boxstarter allbrowsers poshgit webpi visualstudio2015community fiddler slack skype dropbox teamviewer linqpad sublimetext3 7zip office365proplus lockhunter powershellhere steam battle.net ccleaner vlc lastpass-for-applications foxitreader sysinternals windirstat sourcetree nugetpackageexplorer meld -y
+cinst Boxstarter allbrowsers poshgit webpi visualstudio2015community fiddler slack skype dropbox teamviewer linqpad sublimetext3 7zip office365proplus lockhunter powershellhere steam battle.net ccleaner vlc lastpass-for-applications foxitreader sysinternals windirstat sourcetree nugetpackageexplorer meld sublimetext3.powershellalias -y
 
 # Git config
 git config --global alias.a 'add -A'
@@ -77,6 +77,16 @@ git config --global credential.helper wincred
 git config --global core.editor "'c:/program files/sublime text 3/subl.exe'"
 git config --global merge.tool meld
 git config --global mergetool.meld.path "'c:/Program files (x86)/Meld/meld/meldc.exe'"
+
+# Setup some Windows 10 registry hacks
+Push-Location
+Set-Location HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization
+Set-ItemProperty . NoLockScreen 1
+Set-Location HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize
+Set-ItemProperty . AppsUseLightTheme 0
+Set-Location HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize
+Set-ItemProperty . AppsUseLightTheme 0
+Pop-Location
 
 # Windows Setup with Boxstarter
 BOXSTARTERSHELL
