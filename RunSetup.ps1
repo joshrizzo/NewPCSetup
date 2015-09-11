@@ -1,0 +1,1 @@
+START http://boxstarter.org/package/url?https://raw.githubusercontent.com/joshrizzo/NewPCSetup/master/FreshInstall.ps1

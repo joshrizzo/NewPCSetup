@@ -1,9 +1,5 @@
-# Install Chocolatey
-Set-ExecutionPolicy Bypass -Force
-iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
-
 # Install all apps
-cinst Boxstarter allbrowsers poshgit webpi visualstudio2015community fiddler slack skype dropbox teamviewer linqpad sublimetext3 7zip office365proplus lockhunter powershellhere steam battle.net ccleaner vlc lastpass-for-applications foxitreader sysinternals windirstat sourcetree nugetpackageexplorer meld sublimetext3.powershellalias -y
+cinst allbrowsers poshgit webpi visualstudio2015community fiddler slack skype dropbox teamviewer linqpad sublimetext3 7zip office365proplus lockhunter powershellhere steam battle.net ccleaner vlc lastpass-for-applications foxitreader sysinternals windirstat sourcetree nugetpackageexplorer meld sublimetext3.powershellalias -y
 
 # Git config
 git config --global alias.a 'add -A'
@@ -89,7 +85,6 @@ Set-ItemProperty . AppsUseLightTheme 0
 Pop-Location
 
 # Windows Setup with Boxstarter
-BOXSTARTERSHELL
 Disable-UAC
 Enable-RemoteDesktop
 Enable-MicrosoftUpdate
