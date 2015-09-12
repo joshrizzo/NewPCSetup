@@ -1,5 +1,5 @@
-# Install all apps
-cinst allbrowsers poshgit webpi visualstudio2015community fiddler slack skype dropbox teamviewer linqpad sublimetext3 7zip office365proplus lockhunter powershellhere steam battle.net ccleaner vlc lastpass-for-applications foxitreader sysinternals windirstat sourcetree nugetpackageexplorer meld sublimetext3.powershellalias -y
+# Install all apps with Chocolatey
+cinst allbrowsers poshgit webpi visualstudio2015community fiddler slack skype dropbox teamviewer linqpad sublimetext3 7zip office365proplus lockhunter powershellhere steam battle.net ccleaner vlc lastpass-for-applications foxitreader sysinternals windirstat sourcetree nugetpackageexplorer meld sublimetext3.powershellalias jdk8 apache.ant nodejs.install -y
 
 # Git config
 git config --global alias.a 'add -A'
@@ -92,3 +92,14 @@ Install-WindowsUpdate
 Set-StartScreenOptions -EnableBootToDesktop -EnableDesktopBackgroundOnStart -EnableShowStartOnActiveScreen -EnableShowAppsViewOnStartScreen -EnableListDesktopAppsFirst
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 
+# Install Android SDK
+cinst android-sdk -y
+[System.Environment]::SetEnvironmentVariable("PATH", [System.Environment]::GetEnvironmentVariable("PATH", "Machine") + ";$env:LOCALAPPDATA\android\android-sdk\tools;$env:LOCALAPPDATA\android\android-sdk\platform-tools", "Machine")
+$env:PATH = [System.Environment]::GetEnvironmentVariable("PATH", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("PATH", "User")
+
+# Update Android SDK bits
+android update sdk --no-ui
+
+# Install Cordova
+npm install -g cordova
+cordova # Check this works
