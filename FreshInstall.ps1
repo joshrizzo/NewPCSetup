@@ -103,3 +103,6 @@ android update sdk --no-ui
 # Install Cordova
 npm install -g cordova
 cordova # Check this works
+
+# Install Bower
+npm install -g bower
