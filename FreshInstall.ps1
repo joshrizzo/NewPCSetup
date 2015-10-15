@@ -1,5 +1,5 @@
 # Install all apps with Chocolatey
-cinst allbrowsers poshgit webpi visualstudio2015community fiddler slack skype dropbox teamviewer linqpad sublimetext3 7zip office365proplus lockhunter powershellhere steam battle.net ccleaner vlc lastpass-for-applications foxitreader sysinternals windirstat sourcetree nugetpackageexplorer meld sublimetext3.powershellalias jdk8 apache.ant nodejs.install intellijidea-community audacity -y
+cinst allbrowsers poshgit webpi visualstudio2015community fiddler slack skype dropbox teamviewer linqpad sublimetext3 7zip office365proplus lockhunter powershellhere steam battle.net ccleaner vlc lastpass-for-applications foxitreader sysinternals windirstat sourcetree nugetpackageexplorer meld sublimetext3.powershellalias jdk8 apache.ant nodejs.install intellijidea-community audacity sqlserver2014express -y
 
 # Git config
 git config --global alias.a 'add -A'
