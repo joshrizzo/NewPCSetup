@@ -92,17 +92,17 @@ Install-WindowsUpdate
 Set-StartScreenOptions -EnableBootToDesktop -EnableDesktopBackgroundOnStart -EnableShowStartOnActiveScreen -EnableShowAppsViewOnStartScreen -EnableListDesktopAppsFirst
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 
-# Install Android SDK
-cinst android-sdk -y
-[System.Environment]::SetEnvironmentVariable("PATH", [System.Environment]::GetEnvironmentVariable("PATH", "Machine") + ";$env:LOCALAPPDATA\android\android-sdk\tools;$env:LOCALAPPDATA\android\android-sdk\platform-tools", "Machine")
-$env:PATH = [System.Environment]::GetEnvironmentVariable("PATH", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("PATH", "User")
+# # Install Android SDK
+# cinst android-sdk -y
+# [System.Environment]::SetEnvironmentVariable("PATH", [System.Environment]::GetEnvironmentVariable("PATH", "Machine") + ";$env:LOCALAPPDATA\android\android-sdk\tools;$env:LOCALAPPDATA\android\android-sdk\platform-tools", "Machine")
+# $env:PATH = [System.Environment]::GetEnvironmentVariable("PATH", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("PATH", "User")
 
-# Update Android SDK bits
-android update sdk --no-ui
+# # Update Android SDK bits
+# android update sdk --no-ui
 
-# Install Cordova
-npm install -g cordova
-cordova # Check this works
+# # Install Cordova
+# npm install -g cordova
+# cordova # Check this works
 
-# Install Bower
-npm install -g bower
+# # Install Bower
+# npm install -g bower
