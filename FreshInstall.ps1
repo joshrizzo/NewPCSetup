@@ -1,5 +1,5 @@
 # Install all apps with Chocolatey
-cinst nodejs npm allbrowsers poshgit webpi visualstudio2015community fiddler slack skype dropbox teamviewer linqpad sublimetext3 7zip office365proplus lockhunter powershellhere steam battle.net ccleaner vlc lastpass foxitreader sysinternals windirstat gimp sourcetree wireshark nugetpackageexplorer filezilla meld sublimetext3.powershellalias audacity sqlserver2014express webessentials2015 synergy sourcetree goggalaxy packageinstaller webdeploy resharper -y
+cinst nodejs npm allbrowsers poshgit webpi visualstudio2015community fiddler slack skype dropbox teamviewer linqpad sublimetext3 7zip office365proplus lockhunter powershellhere steam battle.net ccleaner vlc lastpass sysinternals windirstat gimp sourcetree wireshark nugetpackageexplorer filezilla meld sublimetext3.powershellalias audacity sqlserver2014express webessentials2015 synergy sourcetree goggalaxy packageinstaller webdeploy resharper -y
 
 # Windows Setup with Boxstarter
 Disable-UAC
